@@ -84,7 +84,7 @@ export class MySQL {
      * @returns returns selected data as T[]
      */
     async select<T>({ query, values, database, table }: Data) {
-        return this.query<T[]>(query, values, database, table)
+        return this.query<T[]>(query, values, database, table) as Promise<T[]>
     }
 
     /**
@@ -96,7 +96,7 @@ export class MySQL {
      * @returns returns affected rows
      */
     async insert({ query, values, database, table }: Data) {
-        return this.query<InsertResponse>(query, values, database, table)
+        return this.query<InsertResponse>(query, values, database, table) as Promise<InsertResponse>
     }
 
     /**
@@ -108,7 +108,7 @@ export class MySQL {
      * @returns returns affected rows
      */
     async delete({ query, values, database, table }: Data) {
-        return this.query<DeleteResponse>(query, values, database, table)
+        return this.query<DeleteResponse>(query, values, database, table) as Promise<DeleteResponse>
     }
 
     /**
@@ -120,7 +120,7 @@ export class MySQL {
      * @returns returns affected rows
      */
     async update({ query, values, database, table }: Data) {
-        return this.query<UpdateResponse>(query, values, database, table)
+        return this.query<UpdateResponse>(query, values, database, table) as Promise<UpdateResponse>
     }
 
     async close() {
@@ -139,7 +139,7 @@ export type Data = {
 
 export type InsertResponse = {
     affectedRows: number
-    insertId: number
+    insertId: bigint
     warningStatus: number
 }
 export type DeleteResponse = {
