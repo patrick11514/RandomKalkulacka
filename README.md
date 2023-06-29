@@ -1,5 +1,6 @@
- # Info
-...
+# Info
+
+Předělávání mojí staré kalkulačky, kterou jsem dělal for fun v PHP, pro [Skypada](https://github.com/skypad6000)
 
 ## Dev mód
 
@@ -34,6 +35,7 @@ DATABASE_IP=10.10.10.223
 DATABASE_PORT=3306
 DATABASE_USER=superclovek
 DATABASE_PASSWORD=tajnyheslo123456
+DATABASE_NAME=super_databaze
 #secret pro JWT (tím se bude podepisovat JWT token - https://jwt.io/)
 JWT_SECRET=text
 #v sekundách (10 min =  10 * 60)
