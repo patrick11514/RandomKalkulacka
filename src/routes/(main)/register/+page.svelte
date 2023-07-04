@@ -4,7 +4,8 @@
     import { userData } from '$components/data.svelte'
     import Link from '$components/link.svelte'
     import { SwalAlert } from '$lib/functions'
-    import type { userResponse } from '$types/response'
+    import type { ResponseWithData } from '$types/response'
+    import type { user } from '$types/types'
 
     let username = ''
     let password = ''
@@ -44,7 +45,7 @@
             })
         })
 
-        const data = (await request.json()) as userResponse
+        const data = (await request.json()) as ResponseWithData<user>
 
         if (data.status) {
             SwalAlert({

@@ -1,7 +1,7 @@
 import { DATABASE_NAME } from '$env/static/private'
 import { checkData, isOk } from '$lib/server/functions'
 import { conn, jwt } from '$lib/server/variables'
-import type { Response, userResponse } from '$types/response'
+import type { Response, ResponseWithData } from '$types/response'
 import { json } from '@sveltejs/kit'
 import bcrypt from 'bcrypt'
 import { z } from 'zod'
@@ -65,7 +65,7 @@ export const POST = (async ({ request, cookies }) => {
         return json({
             status: true,
             data: userData
-        } satisfies userResponse)
+        } satisfies ResponseWithData<typeof userData>)
     }
 
     //check if user exists
@@ -113,5 +113,5 @@ export const POST = (async ({ request, cookies }) => {
     return json({
         status: true,
         data: userData
-    } satisfies userResponse)
+    } satisfies ResponseWithData<typeof userData>)
 }) satisfies RequestHandler
