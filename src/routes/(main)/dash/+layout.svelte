@@ -7,16 +7,16 @@
     }
 </script>
 
-<div class="flex min-h-screen">
-    <div class="m-auto px-6 py-4 w-[98%] h-[95vh] bg-gradient-to-bl from-white to-slate-300 rounded-xl shadow-2xl text-black space-y-3">
+<div class="flex h-full min-h-screen p-4">
+    <div class="m-auto h-full min-h-[98vh] w-full space-y-3 rounded-xl bg-gradient-to-bl from-white to-slate-300 px-6 py-4 text-black shadow-2xl">
         <nav
-            class="px-2 py-2 w-[40%] mx-auto flex flex-row gap-10 justify-center bg-gradient-to-bl from-winter-neva-100 to-winder-neva-200 rounded-full text-black font-prompt text-lg"
+            class="mx-auto flex w-[40%] flex-row justify-center gap-10 rounded-full bg-gradient-to-bl from-winter-neva-100 to-winder-neva-200 px-2 py-2 font-prompt text-lg text-black"
         >
             {#each Object.entries(router) as [route, data]}
                 {#if $page.url?.pathname == route}
-                    <a class="px-3 py-1 bg-blue-950 bg-opacity-30 rounded-xl duration-500" href="./"><i class="bi bi-{data.icon}" /> {data.name}</a>
+                    <a class="rounded-xl bg-blue-950 bg-opacity-30 px-3 py-1 duration-500" href="./"><i class="bi bi-{data.icon}" /> {data.name}</a>
                 {:else}
-                    <a class="px-3 py-1 bg-blue-950 bg-opacity-0 hover:bg-opacity-30 rounded-xl duration-500" href={route}>
+                    <a class="rounded-xl bg-blue-950 bg-opacity-0 px-3 py-1 duration-500 hover:bg-opacity-30" href={route}>
                         <i class="bi bi-{data.icon}" />
                         {data.name}
                     </a>

@@ -73,7 +73,7 @@
 </script>
 
 <div class="flex flex-row space-x-5">
-    <select class="px-4 py-2 text-white rounded-xl font-bold bg-gradient-to-br from-pink-600 to-purple-500" bind:value={selected}>
+    <select class="rounded-xl bg-gradient-to-br from-pink-600 to-purple-500 px-4 py-2 font-bold text-white" bind:value={selected}>
         {#if data}
             {#if data.length == 0}
                 <option class="text-black" value="" selected disabled>Žádné účty nenalezeny</option>
@@ -92,7 +92,7 @@
             await createAccount()
             data = await getAccounts()
         }}
-        class="px-4 py-2 rounded-xl text-white hover:text-gray-200 cursor-pointer disabled:cursor-not-allowed duration-500 font-bold bg-gradient-to-br from-pink-600 to-purple-500"
+        class="cursor-pointer rounded-xl bg-gradient-to-br from-pink-600 to-purple-500 px-4 py-2 font-bold text-white duration-500 hover:text-gray-200 disabled:cursor-not-allowed"
     >
         Vytvořit nový účet
     </button>

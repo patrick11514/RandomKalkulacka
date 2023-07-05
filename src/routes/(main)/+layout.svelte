@@ -12,6 +12,6 @@
     }
 </script>
 
-<section class="bg-gradient-to-bl from-violet-800 to-indigo-900 min-w-screen min-h-screen">
+<section class="h-full w-full overflow-y-scroll bg-gradient-to-bl from-violet-800 to-indigo-900">
     <slot />
 </section>

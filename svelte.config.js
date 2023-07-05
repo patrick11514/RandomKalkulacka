@@ -16,7 +16,7 @@ const config = {
             '$types/*': 'src/types/*',
             '$components/*': 'src/components/*'
         }
-    },
+    }
 }
 
 export default config
