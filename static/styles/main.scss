@@ -1,0 +1,31 @@
+.swal2-popup {
+    background: linear-gradient(to bottom left, #5b21b6, #312e81) !important;
+    color: white;
+
+    .swal2-timer-progress-bar-container {
+        background: transparent !important;
+
+        .swal2-timer-progress-bar {
+            background: linear-gradient(to bottom left, #fff, #cbd5e1) !important;
+        }
+    }
+
+    .swal2-input {
+        outline: none !important;
+        margin-top: 0 !important;
+
+        &:focus {
+            outline: none !important;
+        }
+    }
+
+    .swal2-input-label {
+        font-weight: bold;
+        margin-left: 2.5rem;
+    }
+
+    .swal2-validation-message {
+        background: transparent !important;
+        color: white !important;
+    }
+}
