@@ -2,7 +2,7 @@
     import { page } from '$app/stores'
 
     const router = {
-        '/dash': { name: 'Administrace', icon: 'house' },
+        '/dash': { name: 'Přehled', icon: 'house' },
         '/dash/accounts': { name: 'Účty', icon: 'cash-coin' }
     }
 </script>
