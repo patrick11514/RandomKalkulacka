@@ -5,6 +5,7 @@
     import type { ResponseWithData } from '$types/response'
     import type { account } from '$types/types'
     import { onMount } from 'svelte'
+    import Button from './button.svelte'
 
     export const getAccounts = async () => {
         const request = await fetch('/api/accounts/list')
@@ -87,13 +88,13 @@
             <option class="text-black" value="" selected disabled>Načítání...</option>
         {/if}
     </select>
-    <button
+    <Button
+        scheme="pink"
         on:click={async () => {
             await createAccount()
             data = await getAccounts()
         }}
-        class="cursor-pointer rounded-xl bg-gradient-to-br from-pink-600 to-purple-500 px-4 py-2 font-bold text-white duration-500 hover:text-gray-200 disabled:cursor-not-allowed"
     >
         Vytvořit nový účet
-    </button>
+    </Button>
 </div>

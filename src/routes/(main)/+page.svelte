@@ -1,5 +1,6 @@
 <script lang="ts">
     import { goto } from '$app/navigation'
+    import Button from '$components/button.svelte'
     import Card from '$components/card.svelte'
     import { userData } from '$components/data.svelte'
     import Link from '$components/link.svelte'
@@ -66,13 +67,7 @@
     <div class="mx-auto flex w-[75%] flex-col space-y-2">
         <input bind:value={username} placeholder="Jméno" class="rounded-md border-2 border-black px-3 py-0.5 outline-none" type="text" />
         <input bind:value={password} placeholder="Heslo" class="rounded-md border-2 border-black px-3 py-0.5 outline-none" type="password" />
-        <button
-            disabled={buttonDisabled}
-            class="mx-auto w-max cursor-pointer rounded-xl bg-gradient-to-bl from-violet-800 to-indigo-900 px-8 py-2 text-white transition-all duration-300 disabled:cursor-not-allowed disabled:grayscale"
-            on:click={login}
-        >
-            Přihlásit se
-        </button>
+        <Button disabled={buttonDisabled} on:click={login}>Přihlásit se</Button>
     </div>
     <h6 class="mx-auto w-max text-lg">Nebo se místo toho <Link link="/register">registrovat</Link>.</h6>
 </Card>

@@ -17,7 +17,7 @@
 
 <AccountSelector />
 
-<div class="p-10 h-[85%] flex flex-row space-x-3 overflow-x-scroll">
+<div class="m-auto flex flex-wrap clear-both">
     {#each accounts as account}
         <AccountInfo data={account} />
     {/each}
